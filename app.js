@@ -16,6 +16,33 @@ fastify.listen({host: host, port: port }, function (err, address) {
   }
 })
 
+const { Sequelize } = require('sequelize');
+
+// Option 1: Using a connection URI (more concise)
+// const sequelize = new Sequelize('mysql://user:password@host:port/databaseName');
+
+// Option 2: Passing parameters separately (recommended for clarity and security with environment variables)
+const sequelize = new Sequelize('novasolu_swm_pos_release_uat', 'novasolu_swm_pos_release_uat', '12345', {
+  host: '91.204.209.9', // Or your MySQL server's IP/hostname
+  dialect: 'mysql',
+  port: 3306, // Default MySQL port, change if yours is different
+  // Other options like logging, pool configuration, etc. can be added here
+});
+
+// Test the connection
+async function testConnection() {
+  try {
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
+  } catch (error) {
+    console.error('Unable to connect to the database:', error);
+  }
+}
+
+testConnection();
+
+
+
 const html = `
 <!DOCTYPE html>
 <html>
