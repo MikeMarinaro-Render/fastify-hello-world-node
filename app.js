@@ -1,5 +1,6 @@
 const port = process.env.PORT || 3000;
 const host = ("RENDER" in process.env) ? `0.0.0.0` : `localhost`;
+const { Sequelize } = require('sequelize');
 
 const fastify = require('fastify')({
   logger: true
@@ -15,8 +16,6 @@ fastify.listen({host: host, port: port }, function (err, address) {
     process.exit(1)
   }
 })
-
-const { Sequelize } = require('sequelize');
 
 // Option 1: Using a connection URI (more concise)
 // const sequelize = new Sequelize('mysql://user:password@host:port/databaseName');
