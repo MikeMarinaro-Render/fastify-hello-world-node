@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/render-examples/fastify-hello-world#readme",
   "dependencies": {
-    "fastify": "^4.17.0",
-    "@sequelize/mysql"
+    "fastify": "^4.17.0"
   },
   "engines": {
     "node": "18.x"
