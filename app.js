@@ -21,8 +21,8 @@ fastify.listen({host: host, port: port }, function (err, address) {
 // const sequelize = new Sequelize('mysql://user:password@host:port/databaseName');
 
 // Option 2: Passing parameters separately (recommended for clarity and security with environment variables)
-const sequelize = new Sequelize('novasolu_swm_pos_release_uat', 'novasolu_swm_pos_release_uat', '_Rnqz(odsLSY7K]D', {
-  host: '91.204.209.9', // Or your MySQL server's IP/hostname
+/*const sequelize = new Sequelize('db_name', 'un', 'pw', {
+  host: 'ip/host', // Or your MySQL server's IP/hostname
   dialect: 'mysql',
   port: 3306, // Default MySQL port, change if yours is different
   // Other options like logging, pool configuration, etc. can be added here
@@ -38,7 +38,7 @@ async function testConnection() {
   }
 }
 
-testConnection();
+testConnection();*/;
 
 
 
